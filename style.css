@@ -1,0 +1,88 @@
+:root {
+    --red: #c72523;
+    --white: #B9BEBA;
+    --dark-blue: #1E2639;
+    --blue: #4D8AB5;
+    --auburn: #951E22;
+    --dark-auburn: #4D1518;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+body{
+    background-color: darkgray;
+    color: var(--white);
+    padding: 10px;
+    font-size: 1.7rem;
+    display: flex;
+}
+
+footer{
+    padding: 15px;
+}
+.button{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    font-size: 1em;
+    transition-duration: 0.4s;
+    display: block;
+}
+
+.button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.card{
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--dark-auburn);
+    box-shadow: var(--auburn);
+}
+
+.card > img{
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+@media screen and (max-width: 1200px) {
+     main,
+     nav {
+        display: flex;
+     }
+
+}
+
+@media  screen and (max-width: 1000px) {
+    main,
+    nav{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 992px){
+    main,
+    nav{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main,
+    nav{
+        display: flex;
+    }
+}
