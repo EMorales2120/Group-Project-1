@@ -213,4 +213,3 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/macos,osx,node,visualstudiocode
 
 /connection 
-connection.php
