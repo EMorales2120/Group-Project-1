@@ -31,9 +31,10 @@ alltabsHead.forEach(singleTabHead => {
         hideAllTabBody(); 
         activeTab = singleTabHead.dadaset.id;
         showActiveTabHead();
+        showActiveTabBody();
 
-    })
-})
+    });
+});
 
 const getInputValue = (event) => {
     event.preventDefault();
@@ -99,8 +100,71 @@ const showSuperheroDetails = (data) => {
     <li>
         <div>
             <i class = "fa-solid fa-shield-halves"></i>
-            <span></span>
+            <span>intelligance</span>
         </div>
-        <span>${data[0]}</span>
-        `
+        <span>${data[0].powerstats.intelligance}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span>strength</span>
+        </div>
+        <span>${data[0].powerstats.strength}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span>speed</span>
+        </div>
+        <span>${data[0].powerstats.speed}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span>durability</span>
+        </div>
+        <span>${data[0].powerstats.durability}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span>power</span>
+        </div>
+        <span>${data[0].powerstats.power}</span>
+    </li>
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span>combat</span>
+        </div>
+        <span>${data[0].powerstats.combat}</span>
+    </li>
+        `;
+
+        document.querySelector('.biography').innerhtml = `
+    <li>
+        <span>full name</span>
+        <span>${data[0].biography['full-name']}</span>
+    </li>
+    <li>
+        <span>alter-egos</span>
+        <span>${data[0].biography['alter-ego']}</span>
+    </li>
+    <li>
+        <span>aliases</span>
+        <span>${data[0].biography['aliases']}</span>
+    </li>
+    <li>
+        <span>place-of-birth</span>
+        <span>${data[0].biography['place-of-birth']}</span>
+    </li>
+    <li>
+        <span>first-appearance</span>
+        <span>${data[0].biography['first-appearance']}</span>
+    </li>
+    <li>
+        <span>publisher</span>
+        <span>${data[0].biography['publisher']}</span>
+    </li>
+    `;
 }
