@@ -1,88 +1,164 @@
 :root {
-    --red: #c72523;
-    --white: #B9BEBA;
-    --dark-blue: #1E2639;
-    --blue: #4D8AB5;
-    --auburn: #951E22;
-    --dark-auburn: #4D1518;
+    --dark: #0A0A0A;
+    --light: #fff;
+    --red: #800500;
+    --yellow: #F2C10E;
+    --gray: #505050;
 }
-
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
+html{
+    font-size: 10px;
+}
 header{
     text-align: center;
     padding: 10px;
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(-dark);
+    color: var(--red);
 }
-
 body{
-    background-color: darkgray;
-    color: var(--white);
+    background-color: var(--dark);
+    color: var(--red);
     padding: 10px;
     font-size: 1.7rem;
     display: flex;
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-footer{
-    padding: 15px;
+.app{
+    background-color: var(--dark);
+    margin: 2rem;
+    padding: 5rem;
+    border-radius: 4px;
+    color: var(--light);
 }
-.button{
-    background-color: var(--dark-blue);
-    color: var(--white);
-    text-align: center;
-    font-size: 1em;
-    transition-duration: 0.4s;
-    display: block;
+.app-header{
+    display: flex;
+    align-items: center;
 }
-
-.button:hover {
-    background-color: var(--blue);
-    color: var(--white);
+.app-header-title span{
+    color: var(--red)
 }
-
-.card{
-    border-style: solid;
-    border-width: 1px;
-    background-color: var(--dark-auburn);
-    box-shadow: var(--auburn);
+.app-header-search{
+    position: relative;
+    padding: 1rem;
+    border: 3px solid var(--gray);
+    border-radius: 2rem;
+    min-width: 420px;
 }
-
-.card > img{
+.app-header-search .search-btn{
+    color: var(--gray);
+    font-size: 2rem;
+}
+.search-list{
+    background-color: var(--light);
     width: 100%;
+    overflow-y: scroll;
+}
+.app-body-content{
+    display: grid;
+}
+.app-body-content-thumbmail{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+}
+.app-body-content-list
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.app-body-tabs-body{
+    margin-top: 3rem;
+}
+POWERSTATS
+.powerstats{
+    display: none;
+}
+.powerstats li{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+.powerstats li div i{
+    color: var(--red);
+}
+.powerstats li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+BIOGRAPHY
+.biography {
+    display: none;
+}
+.biography li{
+    margin: 3rem;
+}
+.biography li div li{
+    color: var(--red);
+}
+.biography li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+APPEARANCE
+.appearance{
+    display: none;
+}
+.appearance li{
+    margin: 3rem;
+}
+.appearance li div li{
+    color: var(--red);
+}
+.appearance li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+CONNECTIONS
+.connections{
+    display: none;
+}
+.connections li{
+    margin: 3rem;
+}
+.connections li div li{
+    color: var(--red);
+}
+.connections li > span{
+    color: var(--yellow);
+    font-weight: 500;
 }
 
-h1 {
-    font-size: 2em;
+@media screen and (max-width:1200px) {
+    .app-body-content{
+        align-items: center;
+        -webkit-box-align: center;
+    }
 }
-
-@media screen and (max-width: 1200px) {
-     main,
-     nav {
-        display: flex;
-     }
-
+@media screen and (max-width:1000px) {
+    .app-body-content-list{
+        margin-top: 1.8rem;
+        text-align: center;
+    }
+    
 }
-
-@media  screen and (max-width: 1000px) {
-    main,
-    nav{
-        display: flex;
+@media screen and (max-width: 992px) {
+    .app-header{
+        flex-direction: column;
+    }
+    .app-header-search{
+        margin-top: 2.8rem;
     }
 }
 
-@media screen and (max-width: 992px){
-    main,
-    nav{
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 768px){
-    main,
-    nav{
-        display: flex;
+@media screen and (max-width:768) {
+    .app-header{
+        flex-direction: column;
+        -webkit-box-direction: normal;
     }
 }
