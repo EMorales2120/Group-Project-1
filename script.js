@@ -58,3 +58,23 @@ const fetchAllSuperHero = async(searchText) => {
         console.log(error);
     }
 }
+
+const showSearchList = (data) => {
+    searchList.innerHTML = "";
+    data.forEach(dataItem => {
+        const divElem = document.createElement('div');
+        divElem.classList.add('search-list-item');
+        divElem.innerHTML = `
+        <img src = "${dataItem.image.url ? dataItem.image.url : ""}"
+        <p data-id = "${dataItem.id}">${dataItem.name}</p>`;
+        searchList.appendChild(divElem);
+    });
+}
+
+searchForm.search.addEventListener('keyup', () => {
+    if(searchForm.search.value.length >1){
+        fetchAllSuperHero(searchForm.search.value);
+    }else{
+        searchList.innerHTML = "";
+    }
+});
