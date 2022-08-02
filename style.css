@@ -1,0 +1,164 @@
+:root {
+    --dark: #0A0A0A;
+    --light: #fff;
+    --red: #800500;
+    --yellow: #F2C10E;
+    --gray: #505050;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+header{
+    text-align: center;
+    padding: 10px;
+    background-color: var(-dark);
+    color: var(--red);
+}
+body{
+    background-color: var(--dark);
+    color: var(--red);
+    padding: 10px;
+    font-size: 1.7rem;
+    display: flex;
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.app{
+    background-color: var(--dark);
+    margin: 2rem;
+    padding: 5rem;
+    border-radius: 4px;
+    color: var(--light);
+}
+.app-header{
+    display: flex;
+    align-items: center;
+}
+.app-header-title span{
+    color: var(--red)
+}
+.app-header-search{
+    position: relative;
+    padding: 1rem;
+    border: 3px solid var(--gray);
+    border-radius: 2rem;
+    min-width: 420px;
+}
+.app-header-search .search-btn{
+    color: var(--gray);
+    font-size: 2rem;
+}
+.search-list{
+    background-color: var(--light);
+    width: 100%;
+    overflow-y: scroll;
+}
+.app-body-content{
+    display: grid;
+}
+.app-body-content-thumbmail{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+}
+.app-body-content-list
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.app-body-tabs-body{
+    margin-top: 3rem;
+}
+POWERSTATS
+.powerstats{
+    display: none;
+}
+.powerstats li{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+.powerstats li div i{
+    color: var(--red);
+}
+.powerstats li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+BIOGRAPHY
+.biography {
+    display: none;
+}
+.biography li{
+    margin: 3rem;
+}
+.biography li div li{
+    color: var(--red);
+}
+.biography li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+APPEARANCE
+.appearance{
+    display: none;
+}
+.appearance li{
+    margin: 3rem;
+}
+.appearance li div li{
+    color: var(--red);
+}
+.appearance li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+CONNECTIONS
+.connections{
+    display: none;
+}
+.connections li{
+    margin: 3rem;
+}
+.connections li div li{
+    color: var(--red);
+}
+.connections li > span{
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+@media screen and (max-width:1200px) {
+    .app-body-content{
+        align-items: center;
+        -webkit-box-align: center;
+    }
+}
+@media screen and (max-width:1000px) {
+    .app-body-content-list{
+        margin-top: 1.8rem;
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width: 992px) {
+    .app-header{
+        flex-direction: column;
+    }
+    .app-header-search{
+        margin-top: 2.8rem;
+    }
+}
+
+@media screen and (max-width:768) {
+    .app-header{
+        flex-direction: column;
+        -webkit-box-direction: normal;
+    }
+}
