@@ -78,3 +78,29 @@ searchForm.search.addEventListener('keyup', () => {
         searchList.innerHTML = "";
     }
 });
+
+searchList.addEventListener('click', (event) => {
+    let searchId = event.target.dataset.id;
+    let singleData = allData.results.filter(singleData => {
+        return searchId === singleData.id;
+    })
+    showSuperheroDetails(singleData);
+    searchList.innerHTML = "";
+});
+
+const showSuperheroDetails = (data) => {
+    console.log(data);
+    document.querySelector('.app-body-content-thumbnail').innerHTML = `
+    <img src = "${data[0].image.url}">
+    `;
+
+    document.querySelector('.name').textContent = data[0].name;
+    document.querySelector('.powerstats').innerHTML = `
+    <li>
+        <div>
+            <i class = "fa-solid fa-shield-halves"></i>
+            <span></span>
+        </div>
+        <span>${data[0]}</span>
+        `
+}
